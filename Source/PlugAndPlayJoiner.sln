@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugAndPlayJoiner", "PlugAndPlayJoiner\PlugAndPlayJoiner.csproj", "{E1060B1A-2D47-45E7-B279-27CB322270B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1060B1A-2D47-45E7-B279-27CB322270B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1060B1A-2D47-45E7-B279-27CB322270B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1060B1A-2D47-45E7-B279-27CB322270B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1060B1A-2D47-45E7-B279-27CB322270B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62042bce-fb43-46f8-90d1-b82b3dffe4a7}
+	EndGlobalSection
+EndGlobal

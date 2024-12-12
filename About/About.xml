@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Plug and Play Joiner (Continued)</name>
+  <packageId>Mlie.PlugAndPlayJoiner</packageId>
+  <author>telardo</author>
+  <url>https://github.com/emipa606/PlugAndPlayJoiner</url>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of telardos mod https://steamcommunity.com/sharedfiles/filedetails/?id=2568064141
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/PlugAndPlayJoiner][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+A simple mod to ensure all new joiners of your colony will follow preset area restriction and work priority settings. Thus, you don't need to set them manually.
+
+[h1]Features:[/h1]
+All new joiners, whether they be your recruited pawns, or guest lodgers from other factions, or slaves whatever, will follow these default settings, once you set them in mod settings:
+1. Area restriction.
+2. General Work Priority.
+3. Professional Work Priority if their work-related skill exceeds a minimum requirement or have work-related passion.
+
+[h1]Compatibility:[/h1]
+Safe to add or remove mid-save. Should compatible with everything, let me know if you find an issue.
+
+[h1]Credits:[/h1]
+DisK for original idea.
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list] 
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/][img]https://img.shields.io/github/v/release/emipa606/PlugAndPlayJoiner?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: restriction,  priority</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+</ModMetaData>

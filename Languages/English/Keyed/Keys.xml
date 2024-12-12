@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PnP.CurrentModVersion>Installed mod-version: {0}</PnP.CurrentModVersion>
+  <PlugAndPlayJoiner>Plug and Play Joiner</PlugAndPlayJoiner>
+  <DefaultAreaRestriction>Joiners' default area restriction</DefaultAreaRestriction>
+  <SettingAreaRestrictionWarning>Can only set a default area with a loaded save.</SettingAreaRestrictionWarning>
+  <DefaultWorkPriority>Joiners' default work priority.</DefaultWorkPriority>
+  <AutoProfessionalWorkPriority>Auto priority for professional works</AutoProfessionalWorkPriority>
+  <ResetAllButton>Reset all settings.</ResetAllButton>
+  <ProfessionalWorkPriority>Professional Work Priority</ProfessionalWorkPriority>
+  <MinimiumAverageSkills>If skill exceeds</MinimiumAverageSkills>
+</LanguageData>
