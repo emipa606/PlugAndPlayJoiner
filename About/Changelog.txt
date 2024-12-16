@@ -1,5 +1,8 @@
 # Changelog for PlugAndPlayJoiner
 
+1.5.1 - The Work Tab-patch should now work with both Work Tab 1.5 Temp and Work Tab - 1.5 Unofficial
+
+
 1.5.0 - First publish
 Used DeepL to update translations for ChineseSimplified, French, German
 

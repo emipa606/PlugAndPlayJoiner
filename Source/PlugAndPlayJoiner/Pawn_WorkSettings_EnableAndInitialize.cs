@@ -18,7 +18,7 @@ internal class Pawn_WorkSettings_EnableAndInitialize
         var getAlterProirityMethod = typeof(Pawn_WorkSettings_EnableAndInitialize).GetMethod(nameof(GetAlterPriority));
         var setPriorityMI = typeof(Pawn_WorkSettings).GetMethod(nameof(Pawn_WorkSettings.SetPriority));
         var pawnFI = typeof(Pawn_WorkSettings).GetField("pawn", BindingFlags.Instance | BindingFlags.NonPublic);
-        if (!ModLister.HasActiveModWithName("Work Tab"))
+        if (!ModLister.AnyFromListActive(["fluffy.worktab", "arof.fluffy.worktab", "arof.fluffy.worktab.continued"]))
         {
             for (var i = 0; i < codes.Count; i++)
             {
