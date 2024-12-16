@@ -47,13 +47,13 @@ internal class Pawn_WorkSettings_EnableAndInitialize
 
             if (!found)
             {
-                Log.Error("[Plug and play joiner]'s transpiler failed");
+                Log.Error("[Plug and Play Joiner] transpiler failed");
             }
 
             yield break;
         }
 
-        Log.Message("[Plug and Play Joiner] trying to patch for work tab compatibility");
+        Log.Message("[Plug and Play Joiner] trying to patch for Work Tab compatibility");
         for (var i = 0; i < codes.Count; i++)
         {
             if (codes[i].opcode == OpCodes.Call && codes[i + 1].opcode == OpCodes.Ldloc_2)
@@ -88,7 +88,11 @@ internal class Pawn_WorkSettings_EnableAndInitialize
 
         if (!found)
         {
-            Log.Error("[Plug and play joiner]'s transpiler failed when patching work tab.");
+            Log.Error("[Plug and Play Joiner] transpiler failed when patching work tab.");
+        }
+        else
+        {
+            Log.Message("[Plug and Play Joiner] Work tab compatibility patched");
         }
     }
 

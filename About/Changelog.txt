@@ -1,5 +1,8 @@
 # Changelog for PlugAndPlayJoiner
 
+1.5.2 - It should now be possible to set joining prios to the increased value of the Work Tab-mod
+
+
 1.5.1 - The Work Tab-patch should now work with both Work Tab 1.5 Temp and Work Tab - 1.5 Unofficial
 
 

@@ -21,6 +21,8 @@ internal class PlugAndPlayJoinerModHandler : Mod
 
     private readonly Area_SnowClear areaSnowClear = new Area_SnowClear();
 
+    private bool refreshed;
+
     private Vector2 scrollPos = new Vector2(0f, 0f);
 
     public PlugAndPlayJoinerModHandler(ModContentPack content)
@@ -32,6 +34,12 @@ internal class PlugAndPlayJoinerModHandler : Mod
 
     public override void DoSettingsWindowContents(Rect rect)
     {
+        if (PlugAndPlayJoinerPatchHandler.WorkTabEnabled && !refreshed)
+        {
+            PlugAndPlayJoinerPatchHandler.RefreshLowestPrio();
+            refreshed = true;
+        }
+
         var listing_Standard = new Listing_Standard();
         listing_Standard.Begin(rect);
         if (Current.Game == null)
@@ -89,7 +97,7 @@ internal class PlugAndPlayJoinerModHandler : Mod
                 try
                 {
                     var list2 = new List<FloatMenuOption>();
-                    for (var i = 0; i <= 4; i++)
+                    for (var i = 0; i <= PlugAndPlayJoinerPatchHandler.LowestPrio; i++)
                     {
                         var intBuf2 = i.ToString();
                         list2.Add(new FloatMenuOption(intBuf2,
@@ -125,7 +133,7 @@ internal class PlugAndPlayJoinerModHandler : Mod
             try
             {
                 var list3 = new List<FloatMenuOption>();
-                for (var j = 0; j <= 4; j++)
+                for (var j = 0; j <= PlugAndPlayJoinerPatchHandler.LowestPrio; j++)
                 {
                     var intBuf = j.ToString();
                     list3.Add(new FloatMenuOption(intBuf,
@@ -156,6 +164,12 @@ internal class PlugAndPlayJoinerModHandler : Mod
         listing_Standard2.End();
         Widgets.EndScrollView();
         base.DoSettingsWindowContents(rect);
+    }
+
+    public override void WriteSettings()
+    {
+        base.WriteSettings();
+        refreshed = false;
     }
 
     public override string SettingsCategory()
