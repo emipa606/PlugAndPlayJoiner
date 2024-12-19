@@ -1,5 +1,9 @@
 # Changelog for PlugAndPlayJoiner
 
+1.5.3 - Added support for PriorityMaster
+Used DeepL to update translations for ChineseSimplified, French, German
+
+
 1.5.2 - It should now be possible to set joining prios to the increased value of the Work Tab-mod
 
 

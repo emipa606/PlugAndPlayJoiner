@@ -10,4 +10,6 @@
   <ResetAllButton>Réinitialiser tous les paramètres.</ResetAllButton>
   <ProfessionalWorkPriority>Priorité au travail professionnel</ProfessionalWorkPriority>
   <MinimiumAverageSkills>Si la compétence dépasse</MinimiumAverageSkills>
+  <MaxPrioModLoaded>Onglet Travail ou Maître des priorités chargé.
+Si vous modifiez la valeur maximale de la priorité dans l'un de ces modules, n'oubliez pas d'ouvrir cette fenêtre de paramétrage pour réappliquer la nouvelle plage de priorité.</MaxPrioModLoaded>
 </LanguageData>

@@ -4,6 +4,8 @@
 
 Update of telardos mod https://steamcommunity.com/sharedfiles/filedetails/?id=2568064141
 
+- It should now be possible to set joining prios to the increased value of any of the Work Tab-mods
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)

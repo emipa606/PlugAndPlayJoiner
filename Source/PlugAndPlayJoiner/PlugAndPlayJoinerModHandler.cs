@@ -34,7 +34,8 @@ internal class PlugAndPlayJoinerModHandler : Mod
 
     public override void DoSettingsWindowContents(Rect rect)
     {
-        if (PlugAndPlayJoinerPatchHandler.WorkTabEnabled && !refreshed)
+        if ((PlugAndPlayJoinerPatchHandler.WorkTabEnabled || PlugAndPlayJoinerPatchHandler.PriorityMasterEnabled) &&
+            !refreshed)
         {
             PlugAndPlayJoinerPatchHandler.RefreshLowestPrio();
             refreshed = true;
@@ -67,6 +68,12 @@ internal class PlugAndPlayJoinerModHandler : Mod
         }
 
         listing_Standard.Gap(5f);
+        if (PlugAndPlayJoinerPatchHandler.WorkTabEnabled || PlugAndPlayJoinerPatchHandler.PriorityMasterEnabled)
+        {
+            listing_Standard.Label("MaxPrioModLoaded".Translate());
+            listing_Standard.Gap(5f);
+        }
+
         listing_Standard.GapLine(2f);
         listing_Standard.Gap(5f);
         listing_Standard.Label("DefaultWorkPriority".Translate());

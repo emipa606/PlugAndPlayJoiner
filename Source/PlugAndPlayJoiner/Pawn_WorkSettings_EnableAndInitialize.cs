@@ -92,7 +92,7 @@ internal class Pawn_WorkSettings_EnableAndInitialize
         }
         else
         {
-            Log.Message("[Plug and Play Joiner] Work tab compatibility patched");
+            Log.Message("[Plug and Play Joiner] Work Tab gui-compatibility patched");
         }
     }
 

@@ -24,6 +24,8 @@
   <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of telardos mod https://steamcommunity.com/sharedfiles/filedetails/?id=2568064141
 
+- It should now be possible to set joining prios to the increased value of any of the Work Tab-mods
+
 [img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
@@ -64,5 +66,5 @@ DisK for original idea.
 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/][img]https://img.shields.io/github/v/release/emipa606/PlugAndPlayJoiner?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: restriction,  priority 
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3383245777][img]https://img.shields.io/github/v/release/emipa606/PlugAndPlayJoiner?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: restriction,  priority</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.2</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.3</modVersion>
 </ModMetaData>

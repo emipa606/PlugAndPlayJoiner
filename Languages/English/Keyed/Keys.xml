@@ -9,4 +9,6 @@
   <ResetAllButton>Reset all settings.</ResetAllButton>
   <ProfessionalWorkPriority>Professional Work Priority</ProfessionalWorkPriority>
   <MinimiumAverageSkills>If skill exceeds</MinimiumAverageSkills>
+  <MaxPrioModLoaded>Work Tab or Priority Master loaded.
+If you change the max priority value in any of these mods remember to open this settings-window to re-apply the new priority range.</MaxPrioModLoaded>
 </LanguageData>

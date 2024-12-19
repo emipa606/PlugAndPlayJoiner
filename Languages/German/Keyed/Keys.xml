@@ -10,4 +10,6 @@
   <ResetAllButton>Alle Einstellungen zurücksetzen.</ResetAllButton>
   <ProfessionalWorkPriority>Vorrangige berufliche Tätigkeit</ProfessionalWorkPriority>
   <MinimiumAverageSkills>Wenn die Fähigkeit übersteigt</MinimiumAverageSkills>
+  <MaxPrioModLoaded>Work Tab oder Priority Master geladen.
+Wenn Sie den maximalen Prioritätswert in einem dieser Mods ändern, denken Sie daran, dieses Einstellungsfenster zu öffnen, um den neuen Prioritätsbereich wieder zu übernehmen.</MaxPrioModLoaded>
 </LanguageData>

@@ -10,7 +10,11 @@ internal class PlugAndPlayJoinerPatchHandler
 {
     public static int LowestPrio = 4;
     public static readonly FieldInfo WorkTabMaxPrioFieldInfo;
+    public static readonly FieldInfo PriorityMasterSettingFieldInfo;
+    public static readonly object PriorityMasterSettingObject;
+    public static readonly MethodInfo PriorityMasterMaxPrioMethodInfo;
     public static readonly bool WorkTabEnabled;
+    public static readonly bool PriorityMasterEnabled;
 
     static PlugAndPlayJoinerPatchHandler()
     {
@@ -21,11 +25,43 @@ internal class PlugAndPlayJoinerPatchHandler
             if (WorkTabMaxPrioFieldInfo != null)
             {
                 WorkTabEnabled = true;
+                Log.Message("[Plug and Play Joiner] WorkTab-compatibility implemented");
             }
             else
             {
                 Log.Message(
                     "[Plug and Play Joiner] failed to find the maxPriority-field from the WorkTab mod, will not be able to auto-set priorities using it");
+            }
+        }
+
+        if (ModLister.AnyFromListActive(["lauriichan.prioritymaster"]))
+        {
+            Log.Message("[Plug and Play Joiner] trying to find settings-field from PriorityMaster");
+            PriorityMasterSettingFieldInfo =
+                AccessTools.Field(AccessTools.TypeByName("PriorityMod.Core.PriorityMaster"), "settings");
+            if (PriorityMasterSettingFieldInfo != null)
+            {
+                Log.Message("[Plug and Play Joiner] trying to find GetMaxPriority-method from PriorityMaster");
+                PriorityMasterMaxPrioMethodInfo =
+                    AccessTools.Method(AccessTools.TypeByName("PriorityMod.Settings.PrioritySettings"),
+                        "GetMaxPriority");
+
+                if (PriorityMasterMaxPrioMethodInfo != null)
+                {
+                    PriorityMasterSettingObject = PriorityMasterSettingFieldInfo.GetValue(null);
+                    PriorityMasterEnabled = true;
+                    Log.Message("[Plug and Play Joiner] PriorityMaster-compatibility implemented");
+                }
+                else
+                {
+                    Log.Message(
+                        "[Plug and Play Joiner] failed to find the GetMaxPriority-method from the PriorityMaster mod, will not be able to auto-set priorities using it");
+                }
+            }
+            else
+            {
+                Log.Message(
+                    "[Plug and Play Joiner] failed to find the settings-field from the PriorityMaster mod, will not be able to auto-set priorities using it");
             }
         }
 
@@ -41,7 +77,18 @@ internal class PlugAndPlayJoinerPatchHandler
             LowestPrio = (int)WorkTabMaxPrioFieldInfo.GetValue(null);
             if (LowestPrio != beforeValue)
             {
-                Log.Message($"[Plug and Play Joiner] updating the lowest possible prio to {LowestPrio}");
+                Log.Message($"[Plug and Play Joiner] updating the lowest possible prio to {LowestPrio} from WorkTab");
+            }
+        }
+
+        if (PriorityMasterEnabled)
+        {
+            var beforeValue = LowestPrio;
+            LowestPrio = (int)PriorityMasterMaxPrioMethodInfo.Invoke(PriorityMasterSettingObject, null);
+            if (LowestPrio != beforeValue)
+            {
+                Log.Message(
+                    $"[Plug and Play Joiner] updating the lowest possible prio to {LowestPrio} from PriorityMaster");
             }
         }
 
