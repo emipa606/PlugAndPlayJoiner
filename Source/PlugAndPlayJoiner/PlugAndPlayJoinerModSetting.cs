@@ -8,7 +8,7 @@ internal class PlugAndPlayJoinerModSetting : ModSettings
 {
     public bool autoPriorityForProfessionalWork;
 
-    public string defaultAreaRestriction;
+    private string defaultAreaRestriction;
 
     private Dictionary<string, int> priorityByWorkTypeDefName;
 
@@ -39,7 +39,6 @@ internal class PlugAndPlayJoinerModSetting : ModSettings
 
             return priorityByWorkTypeDefName;
         }
-        set => priorityByWorkTypeDefName = value;
     }
 
     public Dictionary<string, int> ProfessionalWorkPriorities
@@ -59,7 +58,6 @@ internal class PlugAndPlayJoinerModSetting : ModSettings
 
             return professionalWorkPriorities;
         }
-        set => professionalWorkPriorities = value;
     }
 
     public Dictionary<string, int> ProfessionalWorkMinSkills
@@ -79,7 +77,6 @@ internal class PlugAndPlayJoinerModSetting : ModSettings
 
             return professionalWorkMinSkills;
         }
-        set => professionalWorkMinSkills = value;
     }
 
     public override void ExposeData()

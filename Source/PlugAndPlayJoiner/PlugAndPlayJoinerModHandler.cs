@@ -15,15 +15,15 @@ internal class PlugAndPlayJoinerModHandler : Mod
 
     private static string currentVersion;
 
-    private readonly Area_NoRoof areaNoRoof = new Area_NoRoof();
+    private readonly Area_NoRoof areaNoRoof = new();
 
-    private readonly Area_BuildRoof areaRoof = new Area_BuildRoof();
+    private readonly Area_BuildRoof areaRoof = new();
 
-    private readonly Area_SnowClear areaSnowClear = new Area_SnowClear();
+    private readonly Area_SnowOrSandClear areaSnowClear = new();
 
     private bool refreshed;
 
-    private Vector2 scrollPos = new Vector2(0f, 0f);
+    private Vector2 scrollPos = new(0f, 0f);
 
     public PlugAndPlayJoinerModHandler(ModContentPack content)
         : base(content)
@@ -41,15 +41,15 @@ internal class PlugAndPlayJoinerModHandler : Mod
             refreshed = true;
         }
 
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
         if (Current.Game == null)
         {
-            listing_Standard.Label("SettingAreaRestrictionWarning".Translate());
+            listingStandard.Label("SettingAreaRestrictionWarning".Translate());
         }
         else
         {
-            if (listing_Standard.ButtonTextLabeled("DefaultAreaRestriction".Translate(),
+            if (listingStandard.ButtonTextLabeled("DefaultAreaRestriction".Translate(),
                     Settings.DefaultAreaRestriction))
             {
                 var list = new List<FloatMenuOption>();
@@ -67,32 +67,32 @@ internal class PlugAndPlayJoinerModHandler : Mod
             }
         }
 
-        listing_Standard.Gap(5f);
+        listingStandard.Gap(5f);
         if (PlugAndPlayJoinerPatchHandler.WorkTabEnabled || PlugAndPlayJoinerPatchHandler.PriorityMasterEnabled)
         {
-            listing_Standard.Label("MaxPrioModLoaded".Translate());
-            listing_Standard.Gap(5f);
+            listingStandard.Label("MaxPrioModLoaded".Translate());
+            listingStandard.Gap(5f);
         }
 
-        listing_Standard.GapLine(2f);
-        listing_Standard.Gap(5f);
-        listing_Standard.Label("DefaultWorkPriority".Translate());
-        listing_Standard.Gap(5f);
-        listing_Standard.CheckboxLabeled("AutoProfessionalWorkPriority".Translate(),
+        listingStandard.GapLine(2f);
+        listingStandard.Gap(5f);
+        listingStandard.Label("DefaultWorkPriority".Translate());
+        listingStandard.Gap(5f);
+        listingStandard.CheckboxLabeled("AutoProfessionalWorkPriority".Translate(),
             ref Settings.autoPriorityForProfessionalWork);
-        listing_Standard.Gap(5f);
+        listingStandard.Gap(5f);
         if (currentVersion != null)
         {
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("PnP.CurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("PnP.CurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
-            listing_Standard.Gap(5f);
+            listingStandard.Gap(5f);
         }
 
-        listing_Standard.End();
+        listingStandard.End();
         var listing_Standard2 = new Listing_Standard();
-        var outRect = new Rect(rect.x, rect.y + listing_Standard.CurHeight, rect.width,
-            rect.height - listing_Standard.CurHeight);
+        var outRect = new Rect(rect.x, rect.y + listingStandard.CurHeight, rect.width,
+            rect.height - listingStandard.CurHeight);
         var rect2 = new Rect(rect.x, rect.y, rect.width - 20f, Settings.ProfessionalWorkPriorities.Count * 40f);
         Widgets.BeginScrollView(outRect, ref scrollPos, rect2);
         listing_Standard2.Begin(rect2);

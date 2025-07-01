@@ -7,5 +7,11 @@
     "restriction",
     " priority"
   ],
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "LastXmlCleaning": "2025-07-01T20:28:28.7475162+02:00",
+  "Patches": false,
+  "Defs": false,
+  "Assemblies": true,
+  "LinesOfCode": 24312.0,
+  "LinesOfXML": 0
 }
